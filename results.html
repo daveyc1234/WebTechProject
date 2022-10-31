@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+    }
+    
+    .topnav a {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    
+    .topnav a.active {
+      background-color: #04AA6D;
+      color: white;
+    }
+    </style>
+
+
+<div class="topnav">
+    <a class="active" href="index2.html">Home</a>
+    <a href="#news"> Clothing</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About Us</a>
+  </div>
+  
+<body>
+<h1> Thank you for your order!</h1>
+<p> If you had an issue, we will promptly respond to your concern from our email fivekidsgolf@gmail.com</p>
+<p> If this is regarding an order in bulk, please call 904-777-4535</p>
+
+    <div id="results"> </div>
+    <a href="index2.html"> Back to Home page</a>
+    <script>
+        const resultsList= document.getElementById('results')
+        new URLSearchParams(window.location.search).forEach((value, name)=> {
+            resultsList.append( ${name}: $ {value})
+            resultsList.append(document.createElement('br'))
+            })    </script>
+</body>
+</html>
